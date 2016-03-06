@@ -1,0 +1,28 @@
+.main-page{
+
+}
+.gametitle{
+  margin-top: 100px;
+}
+.searchbox{
+  padding: 10px;
+}
+.category{
+  width: 80%;
+}
+.category:hover{
+  cursor: pointer;
+}
+.gamedetail{
+  width: 80%;
+}
+.gamebox{
+  color: red;
+  height: 150px;
+  background-size: 100%;
+}
+.categoryrow{
+  height: 50px;
+  line-height: 50px;
+  background-color: red;
+}

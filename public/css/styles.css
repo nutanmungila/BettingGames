@@ -2,13 +2,16 @@
 
 }
 .gametitle{
-  margin-top: 100px;
+  margin-left: 100px;
+  bottom: 5%;
 }
 .searchbox{
   padding: 10px;
 }
 .category{
   width: 80%;
+  color: white;
+  background-color: #990000;
 }
 .category:hover{
   cursor: pointer;
@@ -24,5 +27,4 @@
 .categoryrow{
   height: 50px;
   line-height: 50px;
-  background-color: red;
 }

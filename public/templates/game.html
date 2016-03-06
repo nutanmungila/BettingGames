@@ -3,15 +3,15 @@
   <div class="container category">
     <div class="row categoryrow">
 
-      <div ng-repeat="category in gameCategoryListValue" class="col-md-2 categorycol" ng-click="onClickCategory(category)"> {{category}} </div>
+      <div ng-repeat="category in gameCategoryListValue" class="col-md-2 col-xs-6 categorycol" ng-click="onClickCategory(category)"> {{category}} </div>
     </div>
   </div>
 
   <div class="container gamedetail" >
     <div class="row">
       <div class="searchbox">Search: <input ng-model="searchText"></div>
-      <div ng-repeat="game in state.filteredGames | filter:searchText " class="col-md-4 gamebox" ng-style="{ background: 'url({{ game.image_180x100}}) no-repeat'   }">
-        <div class="gametitle">{{game.title}} </div>
+      <div ng-repeat="game in state.filteredGames | filter:searchText " class="col-md-4 col-xs-6 gamebox" ng-style="{ background: 'url({{ game.image_180x100}}) no-repeat 33% 33%'   }">
+      <div class="gametitle col-md-4 col-xs-6">{{game.title}} </div>
       </div>
     </div>
   </div>

@@ -46,26 +46,43 @@ describe('gameService : ', function () {
                               "title": "Frankie Dettori",
                               "image_180x100": "//d37q0bzpeg751b.cloudfront.net/assets/GB/games/sc_fdt_180x100.jpg",
                               "desktop_categories_ids": "39,3,79",
-                              "desktop_categories": [
-                                "Popular Games",
-                                "Slots",
-                                "All Games"
-                              ]
+                              "desktop_categories": "Popular Games,Slots,All Games"
                             },{
                               "title": "Wild Games",
                               "image_180x100": "//d37q0bzpeg751b.cloudfront.net/assets/GB/games/SC_WILDGAMES_180x100.jpg",
                               "desktop_categories_ids": "3,79",
-                              "desktop_categories": [
-                                "Slots",
-                                "All Games"
-                              ]
+                              "desktop_categories": "Slots,All Games"
                             }]);
 
         }));
 
         it('should getGameData', function () {
             httpBackend.expectGET('/api/gamedata');
+
             gameService.getGameData();
+        });
+        it('should getGameData', function () {
+
+            gameService.getGameData();
+            httpBackend.flush();
+            expect(gameService.state.allGames).toEqual([{
+              "title": "Frankie Dettori",
+              "image_180x100": "//d37q0bzpeg751b.cloudfront.net/assets/GB/games/sc_fdt_180x100.jpg",
+              "desktop_categories_ids": "39,3,79",
+              "desktop_categories": [
+                "Popular Games",
+                "Slots",
+                "All Games"
+              ]
+            },{
+              "title": "Wild Games",
+              "image_180x100": "//d37q0bzpeg751b.cloudfront.net/assets/GB/games/SC_WILDGAMES_180x100.jpg",
+              "desktop_categories_ids": "3,79",
+              "desktop_categories": [
+                "Slots",
+                "All Games"
+              ]
+            }]);
         });
 
 
